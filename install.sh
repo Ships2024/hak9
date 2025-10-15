@@ -18,6 +18,10 @@ echo -e "==> \e[1;33mHak9 Framework\e[0m"
 echo -e "Press \e[1;33many key\e[0m to install Hak9"
 read -n 1
 clear
+apt-get -y install gnome-terminal
+apt-get update -y
+apt-get upgrade -y
+clear
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [[ "$DIR" != "/root/hak9" ]]
 then
