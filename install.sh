@@ -109,7 +109,7 @@ then
 
 	export PATH=/bin/hak9:$PATH
 	sleep 2
-	echo "export PATH=/bin/hak9:$PATH" >> ~/.bashhrc
+	echo "export PATH=/bin/hak9:$PATH" >> ~/.bashrc
 	sleep 2
 	echo "export PATH=/bin/hak9:$PATH" >> ~/.zshrc
 	clear
