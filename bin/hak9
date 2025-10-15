@@ -275,6 +275,7 @@ function check_wlans
 function banner
 {
 	check_wlans
+
       echo -e""
       echo -e "$COL	░██     ░██            ░██        ░██████ $CE"
       echo -e "$COL	░██     ░██            ░██       ░██   ░██ 	  $WHS Name |$RS Ships2024 Hak9 Tools$CE" 
@@ -283,54 +284,52 @@ function banner
       echo -e "$COL	░██     ░██  ░███████  ░███████        ░██   	$WHS Dev  |$RS Ships2024$CE"
       echo -e "$COL	░██     ░██ ░██   ░██  ░██   ░██ ░██   ░██	$WHS Site |$YS github.com/Ships2024/hak9$CE"
       echo -e "$COL	░██     ░██  ░█████░██ ░██    ░██ ░██████  	$WHS Plan |$RS Ehtools Framework$WHS :$YS Tools$CE"                                                                      
-      echo -e ""      
-	echo -e ""$YS"if"$CE") Ifconfig           "$YS"l"$CE") Local IPs & gateways "$RS"|"$CE"  "$YS"scan"$CE") Arp-scan network"
+      echo -e "                                                                                "                                                           
+	echo -e ""$YS"if"$CE") Ifconfig           "$YS"l"$CE") Local IPs & gateways"$CE" "$RS"|"$CE"  "$YS"scan"$CE") Arp-scan network"
 	if [[ "$WLANCHECKING" = "" ]]
 	then
-		echo -e ""$RS" 1"$CE") Enable "$RS"$WLANN"$CE"${SPACESN}"$RS"d1"$CE") Disable "$RS"$WLANN"$CE"${SPACESN}  "$RS"|"$CE" "$YS"start"$CE") Start monitor mode"
-		echo -e ""$RS" 2"$CE") Enable "$RS"$WLANNM"$CE"${SPACESM}"$RS"d2"$CE") Disable "$RS"$WLANNM"$CE"${SPACESM}  "$RS"|"$CE"  "$YS"stop"$CE") Stop monitor mode"
+		echo -e ""$RS" 1"$CE") Enable "$RS"$WLANN"$CE"${SPACESN}"$RS"d1"$CE") Disable "$RS"$WLANN"$CE"${SPACESN}   "$YS"start"$CE") Start monitor mode"
+		echo -e ""$RS" 2"$CE") Enable "$RS"$WLANNM"$CE"${SPACESM}"$RS"d2"$CE") Disable "$RS"$WLANNM"$CE"${SPACESM}    "$YS"stop"$CE") Stop monitor mode"
 	else
-		echo -e ""$YS" 1"$CE") Enable $WLANN${SPACESN}"$YS"d1"$CE") Disable $WLANN${SPACESN}  "$RS"|"$CE" "$YS"start"$CE") Start monitor mode"
-		echo -e ""$YS" 2"$CE") Enable $WLANNM${SPACESM}"$YS"d2"$CE") Disable $WLANNM${SPACESM}  "$RS"|"$CE"  "$YS"stop"$CE") Stop monitor mode"
+		echo -e ""$YS" 1"$CE") Enable $WLANN${SPACESN}"$YS"d1"$CE") Disable $WLANN${SPACESN}   "$YS"start"$CE") Start monitor mode"
+		echo -e ""$YS" 2"$CE") Enable $WLANNM${SPACESM}"$YS"d2"$CE") Disable $WLANNM${SPACESM}    "$YS"stop"$CE") Stop monitor mode"
 	fi
-	echo -e ""$YS" 3"$CE") Change MAC        "$YS"d3"$CE") Restore original MAC "$RS"|"$CE""$YS"update"$CE") Check for updates"
+	echo -e ""$YS" 3"$CE") Change MAC        "$YS"d3"$CE") Restore original MAC "$YS"update"$CE") Check for updates"
 	if [[ -f /usr/bin/anonym8 ]]
 	then
-	echo -e ""$YS" 4"$CE") Enable anonym8    "$YS"d4"$CE") Disable anonym8      "$RS"|"$CE""$YS"errors"$CE") Fix some errors"
+	echo -e ""$YS" 4"$CE") Enable anonym8    "$YS"d4"$CE") Disable anonym8      "$YS"errors"$CE") Fix some errors"
 	else
-	echo -e ""$RS" 4"$CE") Enable anonym8    "$RS"d4"$CE") Disable anonym8      "$RS"|"$CE""$YS"errors"$CE") Fix some errors"
+	echo -e ""$RS" 4"$CE") Enable anonym8    "$RS"d4"$CE") Disable anonym8      "$YS"errors"$CE") Fix some errors"
 	fi
 	if [[ -f /usr/bin/anonsurf ]]
 	then
-	echo -e ""$YS" 5"$CE") Enable anonsurf   "$YS"d5"$CE") Disable anonsurf     "$RS"|"$CE"    "$YS"ks"$CE") Keyboard shortucts"
-	echo -e ""$YS" 6"$CE") Anonsurf's status "$YS"d6"$CE") Restart anonsurf     "$RS"|"$CE""$YS"     d"$CE") Buy me a coffee"
+	echo -e ""$YS" 5"$CE") Enable anonsurf   "$YS"d5"$CE") Disable anonsurf         "$YS"ks"$CE") Keyboard shortucts"
+	echo -e ""$YS" 6"$CE") Anonsurf's status "$YS"d6"$CE") Restart anonsurf          "$YS"s"$CE") Go to settings menu"
 	else
-	echo -e ""$RS" 5"$CE") Enable anonsurf   "$RS"d5"$CE") Disable anonsurf     "$RS"|"$CE"    "$YS"ks"$CE") Keyboard shortucts"
-	echo -e ""$RS" 6"$CE") Anonsurf's status "$RS"d6"$CE") Restart anonsurf     "$RS"|"$CE"     "$YS"d"$CE") Buy me a coffee"
+	echo -e ""$RS" 5"$CE") Enable anonsurf   "$RS"d5"$CE") Disable anonsurf         "$YS"ks"$CE") Keyboard shortucts"
+	echo -e ""$RS" 6"$CE") Anonsurf's status "$RS"d6"$CE") Restart anonsurf          "$YS"s"$CE") Go to settings menu"
 	fi
-	echo -e ""$YS" 7"$CE") View public IP                             "$RS"|"$CE"     "$YS"s"$CE") Go to settings menu"
+	echo -e ""$YS" 7"$CE") View public IP"                                 
 	echo -e ""$YS" 8"$CE") View MAC"
-	echo -e ""$YS" 9"$CE") TOOLS             "$YS"15"$CE") Spoof EMAIL           "$YS"22"$CE") Show bandwidth"
+	echo -e ""$YS" 9"$CE") Tools             "$YS"15"$CE") Spoof email              "$QA"22"$CE") Show bandwidth"
 	if [[ -f /root/ngrok ]]
 	then
-		echo -e ""$YS"10"$CE") Handshake         "$YS"16"$CE") Ngrok port forward"
+		echo -e ""$YS"10"$CE") Handshake         "$YS"16"$CE") Ngrok port forward       "$QS"23"$CE") Arissploit"
 	else
-		echo -e ""$YS"10"$CE") Handshake         "$RS"16"$CE") "$RS"Ngrok"$CE" port forward"
+		echo -e ""$YS"10"$CE") Handshake         "$RS"16"$CE") "$RS"Ngrok"$CE" port forward       "$QS"23"$CE") Arissploit"      
 	fi
 	if [[ -f /usr/local/bin/howdoi ]]
 	then
-		echo -e ""$YS"11"$CE") Find WPS pin      "$YS"17"$CE") Ask (Howdoi tool)"
+		echo -e ""$YS"11"$CE") Find WPS pin      "$YS"17"$CE") Ask (Howdoi tool)"    "$YS"24"$CE") Reboot computer"
 	else
-		echo -e ""$YS"11"$CE") Find WPS pin      "$RS"17"$CE") Ask ("$RS"Howdoi"$CE" tool)"
+		echo -e ""$YS"11"$CE") Find WPS pin      "$RS"17"$CE") Ask ("$RS"Howdoi"$CE" tool)" "$YS"24"$CE") Reboot computer"
 	fi
-	echo -e ""$YS"12"$CE") WEP menu          "$YS"18"$CE") Auto-exploit browser"
-	echo -e ""$YS"13"$CE") MITM              "$YS"19"$CE") Geolocate an IP"
-	echo -e ""$YS"14"$CE") Metasploit        "$YS"20"$CE") Bruteforce login"   
-	echo -e ""$YS" 0"$CE") Exit              "$YS"21"$CE") Sqlmap automated"
-	echo "Choose: "
-	read -e YORNAA
-	#~ echo "$YORNNA"
-	#~ history -s "$YORNNA"
+	echo -e ""$YS"12"$CE") WEP menu          "$YS"18"$CE") Auto-exploit browser     "$YS"25"$CE") Shutdown computer"
+	echo -e ""$YS"13"$CE") MITM              "$YS"19"$CE") Geolocate an IP          "$QE"26"$CE") Simple ehtools shell"
+	echo -e ""$YS"14"$CE") Metasploit        "$YS"20"$CE") Bruteforce login         "$YS"27"$CE") Update APT sources"
+	echo -e ""$YS" 0"$CE") Exit              "$YS"21"$CE") Sqlmap automated         "$YS"28"$CE") Change interfaces"
+	read -e -p $'(\033[4;93mehtools\033[0m\en)> ' YORNAA
+        echo "$YORNAA" >> /etc/ehtools/.ehtools.log
 	clear
 }
 function enable_wlan
@@ -633,7 +632,7 @@ function listshortcuts
 	then
 		TITLE="Dracnmap"
 		NAMECD="cd /root/Dracnmap"
-		KSSET="./dracnmap-v*.sh"
+		KSSET="./dracnmap.sh"
 	elif [[ "$nn" = "11" ]]
 	then
 		TITLE="Fern"
@@ -1615,7 +1614,7 @@ then
 		export TARGIP
 		export PORTTCP
 		export PORTUDP
-		cd "$LPATH"/ls
+		cd "$LPATH"/haks
 		gnome-terminal --geometry 60x12+0+999999 -e ./l131.sh
 		gnome-terminal --geometry 60x20+999999+999999 -e ./l133.sh
 		gnome-terminal --geometry 60x20+999999+0 -e ./l132.sh
@@ -1646,10 +1645,10 @@ then
 		export TARGIP
 		export PORTTCP
 		export PORTUDP
-		cd "$LPATH"/ls
+		cd "$LPATH"/haks
 		gnome-terminal --geometry 60x25+0+999999 -e ./l131.sh
 		gnome-terminal --geometry 60x25+999999+0 -e ./l132.sh
-		gnome-terminal --geometry 60x25+999999+999999 -e ./l133.sh
+		gnome-terminal --geometry 60x25+999999+999999 -e ./133.sh
 		sslstrip -l $PORTTCP -w /root/sslstrip.log
 		echo -e "$PAKTGB"
 		$READAK
@@ -1741,9 +1740,9 @@ then
 		export GATEINT
 		export TARGIP
 		export GATENM
-		cd "$LPATH"/ls
-		gnome-terminal --geometry 60x15+999999+0 -e ./l132.sh
-		gnome-terminal --geometry 60x15+999999+999999 -e ./l133.sh
+		cd "$LPATH"/haks
+		gnome-terminal --geometry 60x15+999999+0 -e ./hak132.sh
+		gnome-terminal --geometry 60x15+999999+999999 -e ./hak133.sh
 	#~ elif [[ "$MITMSET" = "4" ]]
 	#~ then
 		#~ service apache2 start
@@ -3477,7 +3476,7 @@ function wifi_tools
 		if [[ -d "/root/Dracnmap" ]]
 		then
 			cd /root/Dracnmap/
-			./dracnmap-v*.sh	
+			./dracnmap.sh	
 			cd		
 		else
 			echo -e "$TNI"
@@ -6274,7 +6273,7 @@ function update_hak9
 	TESTINTERNETCONNECTION=$(curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//')
 	if [[ "$TESTINTERNETCONNECTION" != "" ]]
 	then
-		VER=$(timeout -s SIGTERM 20 curl "https://raw.githubusercontent.com/arismelachroinos/hak9/master/version.txt" 2>/dev/null)
+		VER=$(timeout -s SIGTERM 20 curl "https://raw.githubusercontent.com/Ships2024/hak9/master/version.txt" 2>/dev/null)
 		if [[ "$VERSION" != "$VER" ]]
 		then
 			clear
@@ -6303,7 +6302,7 @@ function update_hak9
 				#~ echo -e "Cloning the latest github version to new "$LPATH""
 				sleep 1
 				cd
-				git clone https://github.com/arismelachroinos/hak9.git
+				git clone https://github.com/Ships2024/hak9.git
 				cd "$LPATH"
 				chmod +x install.sh
 				clear
@@ -6512,12 +6511,12 @@ function tools_menu
 			echo -e "Other tools:"
 			echo -e "	Some very usefull tools that don't fit to the other categories."
 			echo -e "Install/reinstall a tool:"
-			echo -e "	From here you can install any tool available in the lazy script."
-			echo -e "	If it is already installed, it will be deleted and reistalled."$CE""
+			echo -e "	From here you can install any tool available in the Hak9 Framework."
+			echo -e "	If it is already installed, it will be deleted and re-installed."$CE""
 			echo -e ""
-			echo -e ""$BS"Do you want another tool to be added in the script?"$CE""
+			echo -e ""$BS"Do you want another tool to be added in the Framework?"$CE""
 			echo -e ""$BS"Submit it as an issue on my github repo:"$CE""
-			echo -e "	"$YS"https://github.com/arismelachroinos/hak9"$CE""
+			echo -e "	"$YS"https://github.com/Ships2024/hak9"$CE""
 			echo -e ""
 			echo -e ""
 			echo -e "$PAKTGB"
@@ -8203,40 +8202,6 @@ function select_interface
 		fi
 	done
 }
-function donate_option
-{
-	while true
-	do
-	clear
-	TERMINALTITLE="DONATION"
-	dash_calc
-	printf '\033]2;DONATION\a'
-	echo -e "If you found my script useful, you can buy me a coffee :)"
-	echo -e ""$LBS"Total hak9 donations:"$CE" $DONATIONS"
-	echo -e ""$YS" 1"$CE") Open browser to donate"
-	echo -e ""$YS" 2"$CE") Copy donation link"
-	echo -e ""$YS" b"$CE") I don't care about your work! :P"
-	echo -e "Choose: "
-	read DON
-	if [[ "$DON" = "1" ]]
-	then
-		gio open "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GC9RSY4CS6KAY"
-	elif [[ "$DON" = "2" ]]
-	then
-		echo -e "Donation link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GC9RSY4CS6KAY"
-		echo -e "$PAKTGB"
-		$READAK
-	elif [[ "$DON" = "back" || "$DON" = "b" || "$DON" = "00" ]]
-	then
-		BACKL=1
-		break
-	elif [[ "$DON" = "0" ]]
-	then
-		clear
-		exit
-	fi
-	done
-}
 function ngrok_option
 {
 	while true
@@ -9309,6 +9274,28 @@ function main_options
 			xterm -hold -T "Iftop on $iftopint" -e "iftop -n -i $iftopint -b" & disown
 			BACKL=1
 		fi
+
+	elif [[ "$YORNAA" = "24" ]]
+        then
+                sleep 1
+                clear
+                sleep 0.5
+                reboot
+        
+        elif [[ "$YORNAA" = "25" ]]
+        then
+                sleep 1
+                clear
+                sleep 0.5
+                shutdown 0
+
+	elif [[ "$YORNAA" = "27" ]]
+        then
+                sleep 1
+                clear
+                sleep 0.5
+                apt-get update
+
 	elif [[ "$YORNAA" = "21" ]]
 	then
 		sqlmap_menu
@@ -9847,7 +9834,7 @@ check_if_ks
 	function install_dracnmap
 	{
 		foldname="Dracnmap"
-		gitlink="https://github.com/Screetsec/Dracnmap.git"
+		gitlink="https://github.com/Ships2024/Dracnmap.git"
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10280,6 +10267,7 @@ check_if_ks
 	{
 		apt-get install -y openvas
 		openvas-setup
+		gvm-setup
 	}
 	function install_shellter
 	{
