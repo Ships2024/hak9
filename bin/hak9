@@ -283,8 +283,8 @@ function banner
       echo -e "$COL	░██████████       ░██  ░██   ░██  ░███████ 	$WHS Core |$RS TEF$WHS :$YS Hak9 Framework$CE" 
       echo -e "$COL	░██     ░██  ░███████  ░███████        ░██   	$WHS Dev  |$RS Ships2024$CE"
       echo -e "$COL	░██     ░██ ░██   ░██  ░██   ░██ ░██   ░██	$WHS Site |$YS github.com/Ships2024/hak9$CE"
-      echo -e "$COL	░██     ░██  ░█████░██ ░██    ░██ ░██████  	$WHS Plan |$RS Ehtools Framework$WHS :$YS Tools$CE"                                                                      
-      echo -e "                                                                                "                                                           
+      echo -e "$COL	░██     ░██  ░█████░██ ░██    ░██ ░██████  	$WHS Plan |$RS hak9 Framework$WHS :$YS Tools$CE"                                                                      
+      echo -e ""                                                                                                                                           
 	echo -e ""$YS"if"$CE") Ifconfig           "$YS"l"$CE") Local IPs & gateways"$CE" "$RS"|"$CE"  "$YS"scan"$CE") Arp-scan network"
 	if [[ "$WLANCHECKING" = "" ]]
 	then
@@ -325,11 +325,11 @@ function banner
 		echo -e ""$YS"11"$CE") Find WPS pin      "$RS"17"$CE") Ask ("$RS"Howdoi"$CE" tool)" "$YS"24"$CE") Reboot computer"
 	fi
 	echo -e ""$YS"12"$CE") WEP menu          "$YS"18"$CE") Auto-exploit browser     "$YS"25"$CE") Shutdown computer"
-	echo -e ""$YS"13"$CE") MITM              "$YS"19"$CE") Geolocate an IP          "$QE"26"$CE") Simple ehtools shell"
+	echo -e ""$YS"13"$CE") MITM              "$YS"19"$CE") Geolocate an IP          "$QE"26"$CE") Simple hak9 shell"
 	echo -e ""$YS"14"$CE") Metasploit        "$YS"20"$CE") Bruteforce login         "$YS"27"$CE") Update APT sources"
 	echo -e ""$YS" 0"$CE") Exit              "$YS"21"$CE") Sqlmap automated         "$YS"28"$CE") Change interfaces"
-	read -e -p $'(\033[4;93mehtools\033[0m\en)> ' YORNAA
-        echo "$YORNAA" >> /etc/ehtools/.ehtools.log
+	read -e -p $'(\033[4;93mhak9\033[0m\en)> ' YORNAA
+        echo "$YORNAA" >> /etc/hak9/.hak9.log
 	clear
 }
 function enable_wlan
