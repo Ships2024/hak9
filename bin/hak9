@@ -303,12 +303,12 @@ function banner
 	if [[ -f /usr/bin/anonsurf ]]
 	then
 	echo -e ""$YS" 5"$CE") Enable anonsurf   "$YS"d5"$CE") Disable anonsurf     "$RS"|"$CE"    "$YS"ks"$CE") Keyboard shortucts"
-	echo -e ""$YS" 6"$CE") Anonsurf's status "$YS"d6"$CE") Restart anonsurf     "$RS"|"$CE""$YS"     d"$CE") Buy me a coffee"
+	echo -e ""$YS" 6"$CE") Anonsurf's status "$YS"d6"$CE") Restart anonsurf     "$RS"|"$CE""$YS"     s"$CE") Go to settings menu"
 	else
 	echo -e ""$RS" 5"$CE") Enable anonsurf   "$RS"d5"$CE") Disable anonsurf     "$RS"|"$CE"    "$YS"ks"$CE") Keyboard shortucts"
-	echo -e ""$RS" 6"$CE") Anonsurf's status "$RS"d6"$CE") Restart anonsurf     "$RS"|"$CE"     "$YS"d"$CE") Buy me a coffee"
+	echo -e ""$RS" 6"$CE") Anonsurf's status "$RS"d6"$CE") Restart anonsurf     "$RS"|"$CE"     "$YS"s"$CE") Go to settings menu"
 	fi
-	echo -e ""$YS" 7"$CE") View public IP                             "$RS"|"$CE"     "$YS"s"$CE") Go to settings menu"
+	echo -e ""$YS" 7"$CE") View public IP"                             
 	echo -e ""$YS" 8"$CE") View MAC"
 	echo -e ""$YS" 9"$CE") TOOLS             "$YS"15"$CE") Spoof EMAIL           "$YS"22"$CE") Show bandwidth"
 	if [[ -f /root/ngrok ]]
@@ -484,7 +484,7 @@ function checkifalready
 	done
 	if [[ "$GOOD" = "1" ]]
 	then
-		if [[ "$CHECKKS" = "etercheck" || "$CHECKKS" = "eternalblue" || "$CHECKKS" = "changelog" || "$CHECKKS" = "wififb" || "$CHECKKS" = "nessusstop" || "$CHECKKS" = "nessusstart" || "$CHECKKS" = "pstop" || "$CHECKKS" = "pstart" || "$CHECKKS" = "astop" || "$CHECKKS" = "astart" || "$CHECKKS" = "settings" || "$CHECKKS" = "donate" || "$CHECKKS" = "d" || "$CHECKKS" = "s" || "$CHECKKS" = "g" || "$CHECKKS" = "l" || "$CHECKKS" = "" || "$CHECKKS" = "if" || "$CHECKKS" = "ifconfig" || "$CHECKKS" = "interfaces" || "$CHECKKS" = "interface" || "$CHECKKS" = "errors" || "$CHECKKS" = "00" || "$CHECKKS" = "exit" || "$CHECKKS" = "update" || "$CHECKKS" = "d1" || "$CHECKKS" = "d2" || "$CHECKKS" = "d3" || "$CHECKKS" = "d4" || "$CHECKKS" = "d5" || "$CHECKKS" = "d6" || "$CHECKKS" = "d7" || "$CHECKKS" = "gg" || "$CHECKKS" = "ks" ]]
+		if [[ "$CHECKKS" = "etercheck" || "$CHECKKS" = "eternalblue" || "$CHECKKS" = "changelog" || "$CHECKKS" = "wififb" || "$CHECKKS" = "nessusstop" || "$CHECKKS" = "nessusstart" || "$CHECKKS" = "pstop" || "$CHECKKS" = "pstart" || "$CHECKKS" = "astop" || "$CHECKKS" = "astart" || "$CHECKKS" = "settings" || "$CHECKKS" = "d" || "$CHECKKS" = "s" || "$CHECKKS" = "g" || "$CHECKKS" = "l" || "$CHECKKS" = "" || "$CHECKKS" = "if" || "$CHECKKS" = "ifconfig" || "$CHECKKS" = "interfaces" || "$CHECKKS" = "interface" || "$CHECKKS" = "errors" || "$CHECKKS" = "00" || "$CHECKKS" = "exit" || "$CHECKKS" = "update" || "$CHECKKS" = "d1" || "$CHECKKS" = "d2" || "$CHECKKS" = "d3" || "$CHECKKS" = "d4" || "$CHECKKS" = "d5" || "$CHECKKS" = "d6" || "$CHECKKS" = "d7" || "$CHECKKS" = "gg" || "$CHECKKS" = "ks" ]]
 		then
 			GOOD="0"
 			echo -e ""$RS"This shortcut is already in use by the script."$CE""
@@ -8203,40 +8203,6 @@ function select_interface
 		fi
 	done
 }
-function donate_option
-{
-	while true
-	do
-	clear
-	TERMINALTITLE="DONATION"
-	dash_calc
-	printf '\033]2;DONATION\a'
-	echo -e "If you found my script useful, you can buy me a coffee :)"
-	echo -e ""$LBS"Total hak9 donations:"$CE" $DONATIONS"
-	echo -e ""$YS" 1"$CE") Open browser to donate"
-	echo -e ""$YS" 2"$CE") Copy donation link"
-	echo -e ""$YS" b"$CE") I don't care about your work! :P"
-	echo -e "Choose: "
-	read DON
-	if [[ "$DON" = "1" ]]
-	then
-		gio open "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GC9RSY4CS6KAY"
-	elif [[ "$DON" = "2" ]]
-	then
-		echo -e "Donation link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GC9RSY4CS6KAY"
-		echo -e "$PAKTGB"
-		$READAK
-	elif [[ "$DON" = "back" || "$DON" = "b" || "$DON" = "00" ]]
-	then
-		BACKL=1
-		break
-	elif [[ "$DON" = "0" ]]
-	then
-		clear
-		exit
-	fi
-	done
-}
 function ngrok_option
 {
 	while true
@@ -9393,9 +9359,6 @@ function main_options
 	then
 		ngrok_option
 		BACKL=1
-	elif [[ "$YORNAA" = "donate" || "$YORNAA" = "d" ]]
-	then
-		donate_option
 #------services
 	elif [[ "$YORNAA" = "pstart" ]]
 	then
