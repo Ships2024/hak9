@@ -631,7 +631,7 @@ function listshortcuts
 	then
 		TITLE="Dracnmap"
 		NAMECD="cd /root/Dracnmap"
-		KSSET="./dracnmap-v*.sh"
+		KSSET="./dracnmap.sh"
 	elif [[ "$nn" = "11" ]]
 	then
 		TITLE="Fern"
@@ -3475,7 +3475,7 @@ function wifi_tools
 		if [[ -d "/root/Dracnmap" ]]
 		then
 			cd /root/Dracnmap/
-			./dracnmap-v*.sh	
+			./dracnmap.sh	
 			cd		
 		else
 			echo -e "$TNI"
@@ -3671,12 +3671,12 @@ function wifi_tools
 			if [[ "$SORS" == "start" ]]
 			then
 				netstat -nltp
-				openvas-start
+				gvm-start
 				echo -e "Launching firefox..."
 				sleep 1
 				firefox https://127.0.0.1:9392
 			else
-				openvas-stop
+				gvm-stop
 			fi
 		else
 			echo -e "$TNI"
@@ -9808,7 +9808,7 @@ check_if_ks
 	function install_dracnmap
 	{
 		foldname="Dracnmap"
-		gitlink="https://github.com/Screetsec/Dracnmap.git"
+		gitlink="https://github.com/Ships2024/Dracnmap.git"
 		install_default
 		cloned=$?
 		if [[ "$cloned" == 1 ]]
@@ -10239,8 +10239,8 @@ check_if_ks
 	}
 	function install_openvas
 	{
-		apt-get install -y openvas
-		openvas-setup
+		apt-get install -y gvm
+		gvm-setup
 	}
 	function install_shellter
 	{
