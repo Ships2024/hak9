@@ -275,12 +275,13 @@ function check_wlans
 function banner
 {
 	check_wlans
-      	echo -e""		 __            __     ________ 
-	echo -e "$COL		|  |__ _____  |  | __/   __   \ $CE"v$VERSION"
-	echo -e "$COL		|  |  \\__  \ |  |/ /\____    /   $CE by "$COL"Ships2024$CE"
-	echo -e "$COL		|   Y  \/ __ \|    <    /    /   $CE"
-	echo -e "$COL		|___|  (____  /__|_ \  /____/   $CE"
-	echo -e "$COL		     \/     \/     \/          $CE"	                                                        
+      	echo -e ""				
+	echo -e "$COL	        ██╗  ██╗ █████╗ ██╗  ██╗ █████╗	$CE v$VERSION"
+	echo -e "$COL		██║  ██║██╔══██╗██║ ██╔╝██╔══██╗$CE"
+	echo -e "$COL		███████║███████║█████╔╝ ╚██████║$CE by "$COL"Ships2024$CE"
+	echo -e "$COL		██╔══██║██╔══██║██╔═██╗  ╚═══██║$CE"
+	echo -e "$COL		██║  ██║██║  ██║██║  ██╗ █████╔╝$CE"
+	echo -e "$COL	        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ $CE"	                                                     
 	echo -e ""$YS"if"$CE") Ifconfig           "$YS"l"$CE") Local IPs & gateways "$RS"|"$CE"  "$YS"scan"$CE") Arp-scan network"
 	if [[ "$WLANCHECKING" = "" ]]
 	then
