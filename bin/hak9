@@ -276,12 +276,12 @@ function banner
 {
 	check_wlans
     echo -e ""				
-	echo -e "$COl		██╗  ██╗ █████╗ ██╗  ██╗ █████╗	$CE v$VERSION"
-	echo -e "$COL		██║  ██║██╔══██╗██║ ██╔╝██╔══██╗$CE"
-	echo -e "$COL		███████║███████║█████╔╝ ╚██████║$CE by "$COL"Ships2024$CE"
-	echo -e "$COL		██╔══██║██╔══██║██╔═██╗  ╚═══██║$CE"
-	echo -e "$COL		██║  ██║██║  ██║██║  ██╗ █████╔╝$CE"
-	echo -e "$COL		╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ $CE"	                                                     
+	echo -e "$COl           ██╗  ██╗ █████╗ ██╗  ██╗ █████╗	$CE v$VERSION"
+	echo -e "$COL           ██║  ██║██╔══██╗██║ ██╔╝██╔══██╗$CE"
+	echo -e "$COL           ███████║███████║█████╔╝ ╚██████║$CE by "$COL"Ships2024$CE"
+	echo -e "$COL           ██╔══██║██╔══██║██╔═██╗  ╚═══██║$CE"
+	echo -e "$COL           ██║  ██║██║  ██║██║  ██╗ █████╔╝$CE"
+	echo -e "$COL           ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ $CE"	                                                     
 	echo -e ""$YS"if"$CE") Ifconfig           "$YS"l"$CE") Local IPs & gateways "$RS"|"$CE"  "$YS"scan"$CE") Arp-scan network"
 	if [[ "$WLANCHECKING" = "" ]]
 	then
@@ -10049,9 +10049,9 @@ check_if_ks
 		fi
 		echo -e "Downloading angryipscanner"
 		sleep 2
-		wget https://github.com/angryip/ipscan/releases/download/3.5.2/ipscan_3.5.2_amd64.deb
+		wget https://github.com/angryip/ipscan/releases/download/3.9.3/ipscan_3.9.3_amd64.deb
 		echo -e "Installing..."
-		dpkg -i ipscan_3.5.2*
+		dpkg -i ipscan_3.9.3*
 		echo -e "Done"
 		sleep 1
 	}
